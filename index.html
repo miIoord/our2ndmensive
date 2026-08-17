@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>sunday & drew</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Parisienne&family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bokeh bokeh--blue"></div>
+<div class="bokeh bokeh--pink"></div>
+<div class="bokeh bokeh--lav"></div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero__eyebrow">welcome to our little world</div>
+  <h1 class="hero__title"><span class="script">sun</span><span class="amp">&amp;</span><span class="script">drew</span></h1>
+  <p class="hero__subtitle">two months, and still my favorite kind of soft.</p>
+  <div class="triad" aria-hidden="true"><span class="dot dot--blue"></span><span class="dot dot--pink"></span><span class="dot dot--lav"></span></div>
+  <button class="scroll-cue" id="scrollCue" aria-label="scroll down">
+    <span>enter our story</span>
+    <svg width="14" height="20" viewBox="0 0 14 20" fill="none"><path d="M7 1v17M1 12l6 6 6-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+</section>
+
+<!-- ============ INTRO NOTE ============ -->
+<section class="intro">
+  <p class="intro__text">dear sunday,<br>i had too many little things i wanted you to see, so i gathered them all in one place —
+  a small corner just for us. happy two months, hubby. 🤍</p>
+</section>
+
+<div class="triad triad--divider" aria-hidden="true"><span class="dot dot--blue"></span><span class="dot dot--pink"></span><span class="dot dot--lav"></span></div>
+
+<!-- ============ PHOTOCARD ============ -->
+<section class="section" id="photocard">
+  <p class="eyebrow">photocard corner</p>
+  <h2 class="section__title">a card, just for you</h2>
+  <p class="section__lead">tap it — there's something written on the back.</p>
+
+  <div class="card3d" id="photocard3d" tabindex="0" role="button" aria-label="flip photocard">
+    <div class="card3d__inner">
+      <div class="card3d__face card3d__front">
+        <!-- EDIT: ganti src ini dengan foto kalian, taruh file-nya di folder assets/ -->
+        <img src="assets/photocard.jpg" alt="our photocard" onerror="this.style.display='none'; this.parentElement.classList.add('img-fallback')">
+        <span class="card3d__hint">us. &lt;3</span>
+      </div>
+      <div class="card3d__face card3d__back">
+        <p class="card3d__note">"i still think about the way you laughed that day.<br>here's to more days just like it — soft, silly, ours."</p>
+        <span class="card3d__sign">— drew</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="triad triad--divider" aria-hidden="true"><span class="dot dot--blue"></span><span class="dot dot--pink"></span><span class="dot dot--lav"></span></div>
+
+<!-- ============ MEMORIES ============ -->
+<section class="section" id="memories">
+  <p class="eyebrow">if memories could live somewhere</p>
+  <h2 class="section__title">memories</h2>
+  <p class="section__lead">i think they'd choose a place like this — three little pieces of us, kept here forever.</p>
+
+  <div class="gallery">
+    <!-- EDIT: ganti gambar & caption sesuai momen kalian berdua -->
+    <figure class="gallery__item">
+      <img src="assets/memory-1.jpg" alt="memory one" onerror="this.parentElement.classList.add('img-fallback')">
+      <figcaption>somewhere between us and forever</figcaption>
+    </figure>
+    <figure class="gallery__item">
+      <img src="assets/memory-2.jpg" alt="memory two" onerror="this.parentElement.classList.add('img-fallback')">
+      <figcaption>my favorite place is next to you</figcaption>
+    </figure>
+    <figure class="gallery__item">
+      <img src="assets/memory-3.jpg" alt="memory three" onerror="this.parentElement.classList.add('img-fallback')">
+      <figcaption>my favorite little chaos</figcaption>
+    </figure>
+  </div>
+</section>
+
+<div class="triad triad--divider" aria-hidden="true"><span class="dot dot--blue"></span><span class="dot dot--pink"></span><span class="dot dot--lav"></span></div>
+
+<!-- ============ DAYS COUNTER ============ -->
+<section class="section section--counter" id="counter">
+  <p class="eyebrow">counting day</p>
+  <h2 class="section__title">days we've been dating</h2>
+  <!-- EDIT: tanggal jadian ada di script.js (const START_DATE) -->
+  <div class="counter__date" id="counterDateLabel">18 june</div>
+  <div class="counter__big" id="counterDays">0</div>
+  <div class="counter__label">days, and counting ♡</div>
+  <p class="counter__since" id="counterSince">since our first day together</p>
+</section>
+
+<div class="triad triad--divider" aria-hidden="true"><span class="dot dot--blue"></span><span class="dot dot--pink"></span><span class="dot dot--lav"></span></div>
+
+<!-- ============ SONG ============ -->
+<section class="section" id="song">
+  <p class="eyebrow">now playing</p>
+  <h2 class="section__title">our song</h2>
+
+  <div class="player">
+    <div class="player__art" id="playerArt">
+      <!-- EDIT: ganti cover lagu di assets/song-cover.jpg -->
+      <img src="assets/song-cover.jpg" alt="song cover" onerror="this.parentElement.classList.add('img-fallback')">
+    </div>
+    <div class="player__body">
+      <!-- EDIT: judul & artis lagu kalian -->
+      <p class="player__title">About You</p>
+      <p class="player__artist">The 1975</p>
+      <div class="player__controls">
+        <button class="player__btn" id="playBtn" aria-label="play">
+          <svg id="iconPlay" width="16" height="18" viewBox="0 0 16 18" fill="currentColor"><path d="M0 0l16 9-16 9V0z"/></svg>
+          <svg id="iconPause" width="14" height="18" viewBox="0 0 14 18" fill="currentColor" style="display:none"><rect width="4" height="18"/><rect x="10" width="4" height="18"/></svg>
+        </button>
+        <div class="player__bar"><div class="player__bar-fill" id="playerBarFill"></div></div>
+      </div>
+      <!-- EDIT: taruh file lagu kalian di assets/song.mp3 -->
+      <audio id="audio" src="assets/song.mp3" preload="none"></audio>
+    </div>
+  </div>
+</section>
+
+<div class="triad triad--divider" aria-hidden="true"><span class="dot dot--blue"></span><span class="dot dot--pink"></span><span class="dot dot--lav"></span></div>
+
+<!-- ============ MESSAGE ============ -->
+<section class="section section--message" id="message">
+  <p class="eyebrow">open this when you're ready</p>
+  <h2 class="section__title">a little letter</h2>
+
+  <button class="envelope" id="envelopeBtn" aria-expanded="false">
+    <span class="envelope__flap"></span>
+    <span class="envelope__body"></span>
+    <span class="envelope__heart">♡</span>
+    <span class="envelope__label">tap to open</span>
+  </button>
+
+  <!-- EDIT: ganti isi pesan ini sesuai kata-kata kalian sendiri -->
+  <div class="letter" id="letterText">
+    <p>sunday,</p>
+    <p>two months feels small on paper, and impossibly big in real life. i think it's because you made every one of those days feel unhurried and warm, like i already knew where i wanted to be.</p>
+    <p>thank you for laughing at my bad jokes, for the long calls that turn into good mornings, for choosing me on the easy days and the messy ones too.</p>
+    <p>here's to more days we've been dating, more pages, more us.</p>
+    <p class="letter__sign">yours, drew ♡</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="triad" aria-hidden="true"><span class="dot dot--blue"></span><span class="dot dot--pink"></span><span class="dot dot--lav"></span></div>
+  <p>made with a soft heart, for sunday.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
